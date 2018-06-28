@@ -1,0 +1,5 @@
+print("enter name")
+x=input()
+print("enter age")
+a=int(input())
+print(x,a)

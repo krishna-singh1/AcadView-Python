@@ -1,0 +1,10 @@
+>>> print(1,1,1,1)
+1 1 1 1
+>>> print(1,1,1,1,sep="a")
+1a1a1a1
+>>> 
+
+                  """""""""""""sep stands for seprator"""""""""""""""
+
+py has complex type also 6+6j
+

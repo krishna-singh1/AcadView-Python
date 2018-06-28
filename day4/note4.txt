@@ -1,0 +1,145 @@
+Date : 11/6/2018
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> l=[1,2,3,4,5]
+>>> l.append(6)
+>>> l.append(45)
+>>> l
+[1, 2, 3, 4, 5, 6, 45]
+>>> l.append(1,2,3)
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    l.append(1,2,3)
+TypeError: append() takes exactly one argument (3 given)
+>>> l.append([1,2,3])
+>>> l
+[1, 2, 3, 4, 5, 6, 45, [1, 2, 3]]
+>>> l.append((1,2,3))
+>>> l
+[1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3)]
+>>> l.extend(1,2,3)
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    l.extend(1,2,3)
+TypeError: extend() takes exactly one argument (3 given)
+>>> l.extend([2,3,4,5,6])
+>>> l
+[1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5, 6]
+>>> sort(l)
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    sort(l)
+NameError: name 'sort' is not defined
+>>> l+[3,45,6]
+[1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5, 6, 3, 45, 6]
+>>> 
+>>> 
+
+>>> 
+
+
+>>> 
+
+
+>>> 
+
+
+
+
+
+
+>>> 
+
+
+>>> 
+
+
+
+>>> 
+
+
+
+>>> 
+
+
+
+>>> 
+
+>>> 
+
+
+
+>>> 
+>>> 
+>>> l.insert(0,0)
+>>> l
+[0, 1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5, 6]
+>>> #for insert
+>>> l.pop()
+6
+>>> l
+[0, 1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5]
+>>> l.count(3)
+2
+>>> ###################for counting
+>>> l.sort()
+Traceback (most recent call last):
+  File "<pyshell#34>", line 1, in <module>
+    l.sort()
+TypeError: '<' not supported between instances of 'list' and 'int'
+>>> l.extend([6,8,3])
+>>> l
+[0, 1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5, 6, 8, 3]
+>>> l.sort()
+Traceback (most recent call last):
+  File "<pyshell#37>", line 1, in <module>
+    l.sort()
+TypeError: '<' not supported between instances of 'list' and 'int'
+>>> l.clear
+<built-in method clear of list object at 0x06382B20>
+>>> l
+[0, 1, 2, 3, 4, 5, 6, 45, [1, 2, 3], (1, 2, 3), 2, 3, 4, 5, 6, 8, 3]
+>>> l.clear()
+>>> l
+[]
+>>> l.extend([1,6,5,4,3,7])
+>>> l
+[1, 6, 5, 4, 3, 7]
+>>> l.sort()
+>>> l
+[1, 3, 4, 5, 6, 7]
+>>> l.sort(reverse=True)
+>>> l
+[7, 6, 5, 4, 3, 1]
+>>> 
+
+##############################____________________________________________________________________
+>>> #shallow copy deep copy
+>>> a=[1,2,3]
+>>> a=b
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    a=b
+NameError: name 'b' is not defined
+>>> b=a
+>>> b==a
+True
+>>> a is b
+True
+>>> b[1]=6
+>>> b
+[1, 6, 3]
+>>> a
+[1, 6, 3]
+>>> c=a.copy()
+>>> c
+[1, 6, 3]
+>>> c[1]=10
+>>> c
+[1, 10, 3]
+>>> a
+[1, 6, 3]
+>>> b
+[1, 6, 3]
+>>> 
+_____________________________________________________________________________________________________________
